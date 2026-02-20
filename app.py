@@ -195,7 +195,7 @@ with st.sidebar:
                 st.progress(min(max(confidence / 100, 0.0), 1.0))
                 st.caption(f"Model confidence: {confidence:.2f}%")
 
-st.markdown("<div class='section-head'>Front Page Highlights (10 True + 10 Fake, Alternating)</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-head'>Front Page Highlights</div>", unsafe_allow_html=True)
 
 samples = load_sample_news()
 if samples.empty:
