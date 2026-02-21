@@ -94,21 +94,26 @@ def predict_news(text: str, model, vectorizer):
     new_def_test["text"] = new_def_test["text"].apply(wordopt)
     new_x_test = new_def_test["text"]
     new_xv_test = vectorizer.transform(new_x_test)
-    pred_value = model.predict(new_xv_test)[0]
-
-    try:
-        pred = int(pred_value)
-    except (ValueError, TypeError):
-        pred = 0 if str(pred_value).strip().lower() in {"0", "fake", "fake news"} else 1
 
     confidence = None
+    threshold = 0.4  # Lower threshold for 'Not A Fake News'
     if hasattr(model, "predict_proba"):
         probs = model.predict_proba(new_xv_test)[0]
         confidence = float(max(probs) * 100)
-
-    if pred == 1:
-        return "Not A Fake News", confidence
-    return "Fake News", confidence
+        # Assume class 1 is 'Not A Fake News', class 0 is 'Fake News'
+        if probs[1] >= threshold:
+            return "Not A Fake News", confidence
+        else:
+            return "Fake News", confidence
+    else:
+        pred_value = model.predict(new_xv_test)[0]
+        try:
+            pred = int(pred_value)
+        except (ValueError, TypeError):
+            pred = 0 if str(pred_value).strip().lower() in {"0", "fake", "fake news"} else 1
+        if pred == 1:
+            return "Not A Fake News", confidence
+        return "Fake News", confidence
 
 
 st.set_page_config(
