@@ -160,7 +160,7 @@ st.markdown(
         font-family: 'Georgia', serif;
         font-size: 1.3rem;
         font-weight: 700;
-        border-bottom: 2px solid #000000;
+        border-bottom: 2px solid #87CEEB;
         padding-bottom: 4px;
         margin-top: 8px;
         margin-bottom: 10px;
