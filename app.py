@@ -130,6 +130,9 @@ st.markdown(
         background-color: #ffffff;
         color: #000000;
     }
+    [data-testid="stSidebar"] {
+        background-color: #87CEEB;
+    }
     .paper-title {
         text-align: center;
         font-family: 'Georgia', serif;
