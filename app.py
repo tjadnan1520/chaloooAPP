@@ -149,7 +149,7 @@ st.markdown(
     }
     .news-card {
         background: #ffffff;
-        border: 2px solid #000000;
+        border: 2px solid #87CEEB;
         border-radius: 0;
         padding: 16px;
         margin-bottom: 14px;
