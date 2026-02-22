@@ -131,7 +131,7 @@ st.markdown(
         color: #000000;
     }
     [data-testid="stSidebar"] {
-        background-color: #87CEEB;
+        background-color: #a6e1f8;
     }
     .paper-title {
         text-align: center;
