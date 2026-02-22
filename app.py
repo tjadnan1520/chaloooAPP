@@ -164,7 +164,7 @@ st.markdown(
         padding-bottom: 4px;
         margin-top: 8px;
         margin-bottom: 10px;
-        color: #000000;
+        color: #87CEEB;
     }
     </style>
     """,
