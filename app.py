@@ -137,7 +137,7 @@ st.markdown(
         font-weight: 700;
         letter-spacing: 2px;
         margin-bottom: 0;
-        color: #87CEEB;
+        color: #000000;
     }
     .paper-subtitle {
         text-align: center;
@@ -145,7 +145,7 @@ st.markdown(
         font-size: 1rem;
         margin-top: 0;
         margin-bottom: 1.5rem;
-        color: #87CEEB;
+        color: #000000;
     }
     .news-card {
         background: #ffffff;
@@ -154,7 +154,7 @@ st.markdown(
         padding: 16px;
         margin-bottom: 14px;
         font-family: 'Georgia', serif;
-        color: #87CEEB;
+        color: #000000;
     }
     .section-head {
         font-family: 'Georgia', serif;
@@ -164,7 +164,7 @@ st.markdown(
         padding-bottom: 4px;
         margin-top: 8px;
         margin-bottom: 10px;
-        color: #87CEEB;
+        color: #000000;
     }
     </style>
     """,
